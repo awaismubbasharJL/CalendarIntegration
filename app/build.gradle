@@ -1,0 +1,63 @@
+plugins {
+
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+    }
+
+    defaultConfig {
+        applicationId "com.example.calanderapp"
+        minSdkVersion 29
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.2.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.1'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+    implementation 'com.google.api-client:google-api-client:1.31.5'
+    implementation 'com.google.apis:google-api-services-androidpublisher:v3-rev20210605-1.31.0'
+    implementation 'com.google.apis:google-api-services-calendar:v3-rev20210429-1.31.0'
+    implementation 'com.google.auth:google-auth-library-oauth2-http:0.26.0'
+    implementation  'com.google.http-client:google-http-client:1.39.2-sp.1'
+
+    implementation 'com.google.api-client:google-api-client:1.23.0'
+    implementation 'com.google.oauth-client:google-oauth-client-jetty:1.23.0'
+    implementation 'com.google.apis:google-api-services-calendar:v3-rev305-1.23.0'
+
+    //implementation group: 'com.google.http-client', name: 'google-http-client-jackson2', version: '1.11.0-beta'
+   // implementation 'com.google.http-client:google-http-client-jackson2:1.15.0-rc'
+    //implementation 'com.google.api.client.json.jackson2.JacksonFactory:1.15.0-rc'
+
+    // https://mvnrepository.com/artifact/com.google.api.client/google-api-client
+    implementation group: 'com.google.api.client', name: 'google-api-client', version: '1.4.1-beta'
+
+    implementation 'com.google.apis:google-api-services-calendar:v3-rev20210429-1.31.0'
+
+
+}
